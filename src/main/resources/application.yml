@@ -1,0 +1,2 @@
+eventledger:
+  uri: http://event-ledger-staging.connectedfleet.io:8080
