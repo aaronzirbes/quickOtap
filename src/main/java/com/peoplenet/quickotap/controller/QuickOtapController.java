@@ -18,7 +18,7 @@ public class QuickOtapController {
     @Resource
     private QuickOtapService quickOtapService;
 
-    @RequestMapping(value = {"/process-event"}, method = {RequestMethod.POST}, consumes = {"application/json"})
+    @RequestMapping(value = {"/process"}, method = {RequestMethod.POST}, consumes = {"application/json"})
     @ResponseStatus(HttpStatus.OK)
     public void processEvent(@RequestParam("topic") String topic, @RequestBody DsnList dsnList) {
         
@@ -29,6 +29,17 @@ public class QuickOtapController {
 
     }
 
+    @RequestMapping(value = {"/packages"}, method = {RequestMethod.GET}, consumes = {"application/json"})
+    @ResponseStatus(HttpStatus.OK)
+    public void returnPackages(@RequestParam("topic") String topic, @RequestBody DsnList dsnList) {
+
+        if (dsnList != null)
+        {
+            quickOtapService.startOtap(dsnList);
+        }
+
+    }
+    
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public void unexpectedException(final Exception ex) {
