@@ -2,7 +2,7 @@ package com.peoplenet.quickotap.service;
 
 import com.peoplenet.comms.outbound.client.CommsOutboundApi;
 import com.peoplenet.packets.mid.Mid229;
-import com.peoplenet.quickotap.model.DsnList;
+import com.peoplenet.quickotap.model.Otap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.peoplenet.comms.outbound.domain.MobileTerminatedMid;
@@ -16,9 +16,9 @@ public class QuickOtapService {
     @Autowired
     CommsOutboundApi commsOutboundApi;
    
-    public void startOtap(DsnList dsnList)
+    public void startOtap(Otap otap)
     {
-        ArrayList<String> listOfDsns = dsnList.getDsn();
+        ArrayList<String> listOfDsns = otap.getDsn();
 
         Mid229.Params params = new Mid229.Params();
         params.installTrigger = 1;

@@ -1,7 +1,7 @@
 package com.peoplenet.quickotap.controller;
 
 import com.peoplenet.quickotap.service.QuickOtapService;
-import com.peoplenet.quickotap.model.DsnList;
+import com.peoplenet.quickotap.model.Otap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -20,22 +20,24 @@ public class QuickOtapController {
 
     @RequestMapping(value = {"/process"}, method = {RequestMethod.POST}, consumes = {"application/json"})
     @ResponseStatus(HttpStatus.OK)
-    public void processEvent(@RequestParam("topic") String topic, @RequestBody DsnList dsnList) {
+    public void processEvent(@RequestParam("topic") String topic, @RequestBody Otap otap) {
         
-        if (dsnList != null)
+        if (otap != null)
         {
-            quickOtapService.startOtap(dsnList);
+            quickOtapService.startOtap(otap);
         }
 
     }
 
     @RequestMapping(value = {"/packages"}, method = {RequestMethod.GET}, consumes = {"application/json"})
     @ResponseStatus(HttpStatus.OK)
-    public void returnPackages(@RequestParam("topic") String topic, @RequestBody DsnList dsnList) {
+    public void returnPackages(@RequestParam("topic") String topic, @RequestBody Otap otap) {
 
-        if (dsnList != null)
+        //Coming Soon
+        
+        if (otap != null)
         {
-            quickOtapService.startOtap(dsnList);
+            quickOtapService.startOtap(otap);
         }
 
     }

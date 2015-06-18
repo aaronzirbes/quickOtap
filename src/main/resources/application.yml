@@ -1,2 +1,30 @@
-eventledger:
-  uri: http://event-ledger-staging.connectedfleet.io:8080
+commsOutboundApi:
+  uri: http://comms-outbound-service-dev.connectedfleet.io:8080
+
+server:
+  context-path: ''
+  port: 8080
+
+spring:
+  datasource:
+    main:
+      driverClassName: net.sourceforge.jtds.jdbc.Driver
+      url: jdbc:jtds:sqlserver://sql-main:1433;DatabaseName=intouch_main
+      username: intouch
+      password: intouch
+
+    misc:
+      driverClassName: net.sourceforge.jtds.jdbc.Driver
+      url: jdbc:jtds:sqlserver://sql-misc:1433;DatabaseName=intouch_misc
+      username: intouch
+      password: intouch
+
+systemHealth:
+    hid: 999
+    commsDbInstance: -1
+    registrationIntervalSeconds: 120
+    heartbeatIntervalSeconds: 60
+
+application:
+  name: quickOtap
+  displayName: Quick-Otap

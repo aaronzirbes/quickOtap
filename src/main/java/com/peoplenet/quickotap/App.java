@@ -1,3 +1,5 @@
+package com.peoplenet.quickotap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
         
 
 @Configuration @EnableAutoConfiguration
-@ComponentScan(basePackageClasses = { App.class },basePackages = { "com.peoplenet.common.stats.spring","com.peoplenet.quickotap" }) public class App {
+@ComponentScan(basePackageClasses = { App.class },basePackages = { "com.peoplenet.quickotap" }) public class App {
 
     @Value("${commsOutboundApi.uri}")
     String commsOutboundApi;
@@ -31,10 +33,6 @@ import org.springframework.beans.factory.annotation.Value;
     public CommsOutboundApi commsOutboundApi() {
 
         return (CommsOutboundApi) (new ClientApiBuilder<CommsOutboundApi>()).withEndpoint(commsOutboundApi).build(CommsOutboundApi.class);
-        
-//        ClientApiBuilder<CommsOutboundApi> builder = new ClientApiBuilder<>();
-//        builder.withEndpoint(commsOutboundApi);
-//        return(builder.build(CommsOutboundApi.class));
 
     }
 }
