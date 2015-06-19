@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Otap {
 
-    private ArrayList<String> dsn;
+    private ArrayList<Integer> dsn;
     private ArrayList<Packages> packages;
 
-    public ArrayList<String> getDsn() {
+    public ArrayList<Integer> getDsn() {
         return dsn;
     }
 
-    public void setDsn(ArrayList<String> dsn) {
+    public void setDsn(ArrayList<Integer> dsn) {
         this.dsn = dsn;
     }
 
@@ -19,7 +19,7 @@ public class Otap {
         return packages;
     }
 
-    public void setPackage(ArrayList<Packages> packages) {
+    public void setPackages(ArrayList<Packages> packages) {
         this.packages = packages;
     }
 

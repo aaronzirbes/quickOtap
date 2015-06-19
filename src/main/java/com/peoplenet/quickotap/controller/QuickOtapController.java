@@ -20,7 +20,7 @@ public class QuickOtapController {
 
     @RequestMapping(value = {"/process"}, method = {RequestMethod.POST}, consumes = {"application/json"})
     @ResponseStatus(HttpStatus.OK)
-    public void processEvent(@RequestParam("topic") String topic, @RequestBody Otap otap) {
+    public void processEvent(@RequestBody Otap otap) {
         
         if (otap != null)
         {
