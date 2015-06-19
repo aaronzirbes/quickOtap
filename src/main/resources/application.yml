@@ -1,5 +1,5 @@
 commsOutboundApi:
-  uri: http://comms-outbound-service-dev.connectedfleet.io:8080
+  uri: srv://comms-outbound-service.service.consul
 
 server:
   context-path: ''
