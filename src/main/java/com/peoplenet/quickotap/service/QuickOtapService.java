@@ -18,7 +18,7 @@ public class QuickOtapService {
     CommsOutboundApi commsOutboundApi;
 
     public void startOtap(Otap otap) {
-        ArrayList<String> listOfDsns = otap.getDsn();
+        ArrayList<Integer> listOfDsns = otap.getDsn();
 
         Mid229.Params params = new Mid229.Params();
         params.installTrigger = 1;
@@ -26,13 +26,13 @@ public class QuickOtapService {
         params.name = "tempName";
         params.version = "tempVersion";
 
-        for (String dsn : listOfDsns) {
+        for (int dsn : listOfDsns) {
 
             Mid229 mid229 = new Mid229(params);
             mid229.putUInt32(4, 1);  // quick put to add ASN
             MobileTerminatedMid mobileTerminatedMid = new MobileTerminatedMid(mid229);
 
-            commsOutboundApi.queueMobileTerminatedMid(Integer.parseInt(dsn), "MISC", 1, mobileTerminatedMid);
+            commsOutboundApi.queueMobileTerminatedMid(dsn, "MISC", 1, mobileTerminatedMid);
         }
     }
 }
