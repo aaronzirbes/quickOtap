@@ -1,0 +1,16 @@
+target/
+build/
+bin/
+.idea
+*.iml
+.gradle/
+.settings/
+.classpath
+.project
+.springBeans
+.idea/
+*.iml
+*.ipr
+*.iws
+codenarc.groovy
+codenarcTest.groovy
