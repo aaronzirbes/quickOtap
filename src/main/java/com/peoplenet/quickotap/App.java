@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Configuration;
 import com.peoplenet.retrofit.client.ClientApiBuilder;
 import com.peoplenet.comms.outbound.client.CommsOutboundApi;
 import org.springframework.beans.factory.annotation.Value;
-        
+
 
 @Configuration @EnableAutoConfiguration
 @ComponentScan(basePackageClasses = { App.class },basePackages = { "com.peoplenet.quickotap" }) public class App {
+
+
 
     @Value("${commsOutboundApi.uri}")
     String commsOutboundApi;
