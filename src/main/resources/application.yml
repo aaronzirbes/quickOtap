@@ -5,20 +5,6 @@ server:
   context-path: '/quickOtap'
   port: 8080
 
-spring:
-  datasource:
-    main:
-      driverClassName: net.sourceforge.jtds.jdbc.Driver
-      url: jdbc:jtds:sqlserver://sql-main:1433;DatabaseName=intouch_main
-      username: intouch
-      password: intouch
-
-    misc:
-      driverClassName: net.sourceforge.jtds.jdbc.Driver
-      url: jdbc:jtds:sqlserver://sql-misc:1433;DatabaseName=intouch_misc
-      username: intouch
-      password: intouch
-
 systemHealth:
     hid: 999
     commsDbInstance: -1
