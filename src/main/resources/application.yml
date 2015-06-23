@@ -2,7 +2,7 @@ commsOutboundApi:
   uri: srv://comms-outbound-service.service.consul
 
 server:
-  context-path: '/quickotap'
+  context-path: '/quickOtap'
   port: 8080
 
 spring:
