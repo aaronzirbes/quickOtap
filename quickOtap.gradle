@@ -25,7 +25,6 @@ dependencies {
     }
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
 
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
     compile("org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}")
     compile 'org.springframework:spring-beans:4.0.6.RELEASE'
     compile 'org.springframework:spring-core:4.0.6.RELEASE'

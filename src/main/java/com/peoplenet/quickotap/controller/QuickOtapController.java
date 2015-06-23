@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 public class QuickOtapController {
 
     private static final Logger LOG = LoggerFactory.getLogger(QuickOtapController.class);
-    
+
     @Resource
     private QuickOtapService quickOtapService;
 
