@@ -28,7 +28,7 @@ public class QuickOtapService {
 
         Mid229.Params params = new Mid229.Params();
 
-        params.installTrigger = 1;
+        params.installTrigger = 2;
         params.packageCount = packages.size();
 
         for (int i = 0; i < packages.size(); i++) {
