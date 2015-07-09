@@ -6,6 +6,7 @@ public class Otap {
 
     private ArrayList<Integer> dsn;
     private ArrayList<Packages> packages;
+    private int triggerType;
 
     public ArrayList<Integer> getDsn() {
         return dsn;
@@ -13,6 +14,14 @@ public class Otap {
 
     public void setDsn(ArrayList<Integer> dsn) {
         this.dsn = dsn;
+    }
+
+    public int gettriggerType() {
+        return triggerType;
+    }
+
+    public void settriggerType(int triggerType) {
+        this.triggerType = triggerType;
     }
 
     public ArrayList<Packages> getPackages() {
