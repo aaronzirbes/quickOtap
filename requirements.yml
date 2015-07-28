@@ -1,0 +1,3 @@
+- src: git+git@github.com:PeopleNet/ansible-spring-boot.git
+  name: spring-boot
+  version: 1.0.7

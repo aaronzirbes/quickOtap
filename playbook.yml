@@ -1,0 +1,9 @@
+---
+- hosts: all
+  sudo: yes
+  gather_facts: yes
+  roles:
+    - { role:                       spring-boot,
+        app_name:                   '{{ami_name}}',
+        app_port:                   '8080',
+        version:                    '{{app_version}}' }

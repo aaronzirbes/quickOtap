@@ -55,3 +55,9 @@ dependencies {
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+build.doFirst {
+    new File('build').mkdir()
+    file('build/version').text = version.toString()
+    file('build/packer.properties').text = "images=quickOtap-${version}"
+}
